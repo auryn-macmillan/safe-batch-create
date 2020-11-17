@@ -1,0 +1,1 @@
+{"version":3,"file":"putGenesisAccounts.d.ts","sourceRoot":"","sources":["../../../../src/internal/hardhat-network/provider/utils/putGenesisAccounts.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,0BAA0B,CAAC;AAC5D,OAAO,EAAE,cAAc,EAAE,MAAM,eAAe,CAAC;AAI/C,wBAAsB,kBAAkB,CACtC,YAAY,EAAE,gBAAgB,EAC9B,eAAe,EAAE,cAAc,EAAE,iBAMlC"}

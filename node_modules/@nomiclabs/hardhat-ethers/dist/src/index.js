@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const config_1 = require("hardhat/config");
+const plugins_1 = require("hardhat/plugins");
+const helpers_1 = require("./helpers");
+require("./type-extensions");
+config_1.extendEnvironment((hre) => {
+    hre.ethers = plugins_1.lazyObject(() => {
+        const { EthersProviderWrapper } = require("./ethers-provider-wrapper");
+        const { ethers } = require("ethers");
+        return Object.assign(Object.assign({}, ethers), { 
+            // The provider wrapper should be removed once this is released
+            // https://github.com/nomiclabs/hardhat/pull/608
+            provider: new EthersProviderWrapper(hre.network.provider), getSigners: async () => helpers_1.getSigners(hre), 
+            // We cast to any here as we hit a limitation of Function#bind and
+            // overloads. See: https://github.com/microsoft/TypeScript/issues/28582
+            getContractFactory: helpers_1.getContractFactory.bind(null, hre), getContractAt: helpers_1.getContractAt.bind(null, hre) });
+    });
+});
+//# sourceMappingURL=index.js.map

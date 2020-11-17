@@ -1,0 +1,1 @@
+{"version":3,"file":"makeForkCommon.d.ts","sourceRoot":"","sources":["../../../../src/internal/hardhat-network/provider/utils/makeForkCommon.ts"],"names":[],"mappings":";AAAA,OAAO,MAAM,MAAM,mBAAmB,CAAC;AACvC,OAAO,EAAE,EAAE,EAAE,MAAM,iBAAiB,CAAC;AAErC,OAAO,EAAE,aAAa,EAAE,MAAM,sBAAsB,CAAC;AAErD,wBAAsB,cAAc,CAClC,UAAU,EAAE,aAAa,EACzB,eAAe,EAAE,EAAE,mBAKpB"}

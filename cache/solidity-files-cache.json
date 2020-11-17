@@ -1,0 +1,109 @@
+{
+  "_format": "hh-sol-cache-1",
+  "files": {
+    "/home/auryn/bin/gnosis/safe-batch-create/contracts/SafeBatchCreate.sol": {
+      "lastModificationDate": 1605630904070,
+      "sourceName": "contracts/SafeBatchCreate.sol",
+      "solcConfig": {
+        "version": "0.5.3",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@gnosis.pm/safe-contracts/contracts/proxies/IProxyCreationCallback.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.3"
+      ],
+      "artifacts": [
+        "SafeBatchCreate"
+      ]
+    },
+    "/home/auryn/bin/gnosis/safe-batch-create/node_modules/@gnosis.pm/safe-contracts/contracts/proxies/IProxyCreationCallback.sol": {
+      "lastModificationDate": 1605630234235,
+      "sourceName": "@gnosis.pm/safe-contracts/contracts/proxies/IProxyCreationCallback.sol",
+      "solcConfig": {
+        "version": "0.5.3",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GnosisSafeProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.3"
+      ],
+      "artifacts": [
+        "IProxyCreationCallback"
+      ]
+    },
+    "/home/auryn/bin/gnosis/safe-batch-create/node_modules/@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol": {
+      "lastModificationDate": 1605630234235,
+      "sourceName": "@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol",
+      "solcConfig": {
+        "version": "0.5.3",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0 <0.7.0"
+      ],
+      "artifacts": [
+        "GnosisSafeProxy",
+        "IProxy"
+      ]
+    }
+  }
+}

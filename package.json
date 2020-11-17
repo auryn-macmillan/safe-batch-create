@@ -1,0 +1,14 @@
+{
+  "name": "safe-batch-create",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.0",
+    "ethereum-waffle": "^3.2.0",
+    "ethers": "^5.0.19",
+    "hardhat": "^2.0.3"
+  },
+  "dependencies": {
+    "@gnosis.pm/safe-contracts": "^1.2.0",
+    "dotenv": "^8.2.0"
+  }
+}
