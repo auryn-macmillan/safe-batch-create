@@ -1,6 +1,6 @@
 require('dotenv').config()
 require("@nomiclabs/hardhat-waffle");
-const mnemonic = process.env.MNEMONIC
+const mnemonic = 'quit quit flower sword interest nominee merit answer science drift nothing borrow' || process.env.MNEMONIC
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -14,7 +14,7 @@ task("accounts", "Prints the list of accounts", async () => {
 
 module.exports = {
   solidity: {
-    version: "0.5.3",
+    version: "0.5.17",
     settings: {
       optimizer: {
         enabled: true,
@@ -22,14 +22,20 @@ module.exports = {
       }
     }
   },
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "ganache",
   networks: {
     hardhat: {
     },
     rinkeby: {
-      url: process.env.RINKEBY_JSONRPC_HTTP_URL,
+      url: 'http://localhost:8545' || process.env.RINKEBY_JSONRPC_HTTP_URL,
       accounts: {
         mnemonic
+      }
+    },
+    ganache: {
+      url: 'http://localhost:8545',
+      accounts: {
+        mnemonic: 'media quit flower sword interest nominee merit answer science drift nothing borrow'
       }
     }
   }
