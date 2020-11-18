@@ -22,7 +22,7 @@ module.exports = {
       }
     }
   },
-  defaultNetwork: "ganache",
+  defaultNetwork: "localhost",
   networks: {
     hardhat: {
     },
@@ -32,11 +32,5 @@ module.exports = {
         mnemonic
       }
     },
-    ganache: {
-      url: 'http://localhost:8545',
-      accounts: {
-        mnemonic: 'media quit flower sword interest nominee merit answer science drift nothing borrow'
-      }
-    }
   }
 };
