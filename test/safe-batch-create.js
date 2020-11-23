@@ -5,13 +5,14 @@ const safeMasterCopy = '0x34CfAC646f301356fAa8B21e94227e3583Fe3F5F';
 const proxyFactoryAddress = '0x76E2cFc1F5Fa8F6a5b3fC4c8F4788F0116861F9B'
 
 describe("SafeBatchCreate", function() {
+  this.timeout(50000); 
   let SafeBatchCreate
   let safeBatchCreate
   let accounts
   before('Deploy SafeBatchCreate', async function() {
     SafeBatchCreate = await ethers.getContractFactory("SafeBatchCreate");
     safeBatchCreate = await SafeBatchCreate.deploy();
-    await safeBatchCreate.deployed();
+    await safeBatchCreate.deployed({ gasPrice: 1e9 });
 
     accounts = await ethers.getSigners();
   });
@@ -25,6 +26,7 @@ describe("SafeBatchCreate", function() {
         safeMasterCopy,
         owner.address,
         25,
+        { gasPrice: 1e9 },
       )
       const receipt = await response.wait()
       const addresses = receipt.logs.map(({ data }) => ethers.utils.getAddress(data.slice(-40)))
