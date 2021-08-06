@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LGPL-3.0-only
-pragma solidity ^0.5.3;
+pragma solidity ^0.8.0;
 
 import { GnosisSafe } from '@gnosis.pm/safe-contracts/contracts/GnosisSafe.sol';
 import { GnosisSafeProxy } from '@gnosis.pm/safe-contracts/contracts/proxies/GnosisSafeProxy.sol';
@@ -14,7 +14,7 @@ contract SafeBatchCreate {
     address[] memory owners = new address[](1);
     owners[0] = owner;
     bytes memory setupData = abi.encodeWithSelector(
-      GnosisSafe(0).setup.selector,
+      GnosisSafe.setup.selector,
       owners, // address[] calldata _owners,
       uint256(1), // uint256 _threshold,
       address(0), // address to,
